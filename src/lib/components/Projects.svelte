@@ -1,11 +1,46 @@
 <script lang="ts">
   import { Badge } from "$lib/components/ui/badge/index.js";
+  import ProjectCard from "./ProjectCard.svelte";
+
+  const projects = [
+    {
+      title: "Pomo",
+      description:
+        "A simpler and minimal way to organize your study and your project. ",
+      imageUrl: "/pomo.png",
+      projectUrl: "https://pomo.fres.space",
+      githubUrl: "https://github.com/fres-sudo/pomo",
+      badges: ["Flutter", "Dart", "Hono", "Bun", "PostgreSQL"],
+    },
+    {
+      title: "Form Wizard",
+      description: "Build and share form in a snap",
+      imageUrl: "/form-wizard.png",
+      projectUrl: "https://formwizard.fres.space",
+      githubUrl: "https://github.com/fres-sudo/form-wizard",
+      badges: ["NextJs", "Typescript", "React", "Prisma", "PostgreSQL"],
+    },
+    {
+      title: "Arduino Speedometer",
+      description:
+        "Blazing fast Bicycle Arduino Speedometer built with direct register access and timer interrupts.",
+      imageUrl: "/arduino.png",
+      projectUrl: "https://wokwi.com/projects/370181612744975361",
+      githubUrl: "https://github.com/fres-sudo/arduino.speedometer",
+      badges: ["Arduino", "Assembly", "C++"],
+    },
+  ];
 </script>
 
-<div class="flex flex-col h-full items-start mx-1">
-  <div class="flex flex-row items-start w-full">
+<div class="flex flex-col h-full items-start mx-8">
+  <div class="flex flex-row">
+    {#each projects as project}
+      <ProjectCard {project} />
+    {/each}
+  </div>
+  <!--  <div class="flex flex-row items-start w-full">
     <h1 class="font-mono text-2xl mb-3">
-      <span class="text-green-500">Pro</span>ject
+      <span class="text-fres-500">Pro</span>ject
     </h1>
   </div>
   <a
@@ -63,5 +98,5 @@
     <Badge class="bg-muted text-muted-foreground">React</Badge>
     <Badge class="bg-muted text-muted-foreground">Prisma</Badge>
     <Badge class="bg-muted text-muted-foreground">PostgreSQL</Badge>
-  </ul>
+  </ul>--->
 </div>

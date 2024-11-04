@@ -1,55 +1,37 @@
 <script lang="ts">
-  import { Button } from "$lib/components/ui/button";
   import * as Card from "$lib/components/ui/card";
-  import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-  import Separator from "./ui/separator/separator.svelte";
   import { type Post } from "$lib/types";
+  import { formatDate } from "$lib/utils";
 
   export let data: Post;
 
-  const { title, description, date, image, tags } = data;
+  const { title, description, date, image, categories, slug } = data;
 </script>
 
-<Card.Root>
-  <Card.Header class="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
-    <div class="space-y-1">
-      <Card.Title>{title}</Card.Title>
-      <Card.Description>
-        Beautifully designed components built with Radix UI and Tailwind CSS.
-      </Card.Description>
-    </div>
-    <div
-      class="bg-secondary text-secondary-foreground flex items-center space-x-1 rounded-md"
-    >
-      <Button variant="secondary" class="px-3 shadow-none">Star</Button>
-      <Separator orientation="vertical" class="h-[20px]" />
-      <DropdownMenu.Root>
-        <DropdownMenu.Trigger asChild let:builder>
-          <Button
-            builders={[builder]}
-            variant="secondary"
-            class="px-2 shadow-none"
-          ></Button>
-        </DropdownMenu.Trigger>
-        <DropdownMenu.Content class="w-[200px]" align="end">
-          <DropdownMenu.Label>Suggested Lists</DropdownMenu.Label>
-          <DropdownMenu.Separator />
-          <DropdownMenu.CheckboxItem checked
-            >Future Ideas</DropdownMenu.CheckboxItem
-          >
-          <DropdownMenu.CheckboxItem>My Stack</DropdownMenu.CheckboxItem>
-          <DropdownMenu.CheckboxItem>Inspiration</DropdownMenu.CheckboxItem>
-          <DropdownMenu.Separator />
-          <DropdownMenu.Item></DropdownMenu.Item>
-        </DropdownMenu.Content>
-      </DropdownMenu.Root>
-    </div>
-  </Card.Header>
-  <Card.Content>
-    <div class="text-muted-foreground flex space-x-4 text-sm">
-      <div class="flex items-center">TypeScript</div>
-      <div class="flex items-center">20k</div>
-      <div>Updated April 2023</div>
-    </div>
-  </Card.Content>
-</Card.Root>
+<a href={`/blog/${slug}`} class="w-full mb-4">
+  <Card.Root class="hover:bg-fres-900/20 w-full">
+    <Card.Header class="grid sm:flex sm:flex-row sm:justify-between w-full ">
+      <div class="space-y-1">
+        <Card.Title>{title}</Card.Title>
+        <Card.Description>
+          {description}
+        </Card.Description>
+      </div>
+      <p class="text-muted-foreground text-sm">Updated {formatDate(date)}</p>
+    </Card.Header>
+    <Card.Content>
+      <div class="flex flex-col">
+        <div class="text-muted-foreground flex space-x-4 text-sm">
+          {#each categories as category}
+            <div class="flex items-center justify-center">
+              <div
+                class={`rounded-full w-3 h-3 mr-2 border-2 bg-${category.color}-500`}
+              />
+              {category.text}
+            </div>
+          {/each}
+        </div>
+      </div>
+    </Card.Content>
+  </Card.Root>
+</a>

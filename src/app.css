@@ -1,7 +1,7 @@
+@import url(./holi-theme.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @layer base {
   :root {
@@ -50,12 +50,155 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  .prose :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: var(
+      --size-12
+    ); /* Increase top margin for space between sections */
+    margin-bottom: var(--size-4); /* Consistent bottom margin */
+    font-weight: 700;
+  }
+
+  .prose h1 {
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: var(--size-6); /* Extra bottom margin for separation */
+  }
+
+  .prose h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: var(--size-5);
+  }
+
+  .prose h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--muted-foreground); /* Use a neutral border color */
+    margin-top: var(--size-3); /* Space between the h2 text and divider */
+    margin-bottom: var(--size-4); /* Space below the divider */
+  }
+
+  .prose h3 {
+    font-size: 1.75rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.6rem;
+    margin-bottom: var(--size-4);
+  }
+
+  .prose h4 {
+    font-size: 1.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: var(--size-3);
+  }
+
+  .prose h5 {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: var(--size-2);
+  }
+
+  .prose h6 {
+    font-size: 1.1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: var(--size-2);
+    font-style: italic;
+  }
+
+  /* Paragraph and spacing */
+  .prose p {
+    font-size: 1rem;
+    color: inherit;
+    margin-top: var(--size-6);
+    line-height: 1.6;
+  }
+
+  /* List styles */
+  .prose :is(ul, ol) {
+    list-style-type: disc; /* Standard bullet for unordered lists */
+    padding-left: 2rem; /* Add padding for proper alignment */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: var(--size-4); /* Margin left to align with rest of content */
+  }
+
+  .prose ul li,
+  .prose ol li {
+    margin-bottom: var(--size-2); /* Space between list items */
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem; /* Align items nicely under list markers */
+  }
+
+  /* Blockquote styling */
+  .prose blockquote {
+    padding-left: 1rem;
+    color: inherit;
+    border-left: 4px solid var(--border-color); /* Left border for blockquote */
+    font-style: italic;
+    margin-top: var(--size-8);
+    margin-bottom: var(--size-8);
+    opacity: 0.9;
+  }
+
+  /* Link styling */
+  .prose a {
+    color: var(--destructive-foreground);
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+      color 0.2s,
+      background-color 0.2s;
+    position: relative;
+  }
+
+  .prose a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--destructive-foreground);
+    transition: background-color 0.2s;
+    opacity: 0.5; /* Subtle underline */
+  }
+
+  .prose a:hover,
+  .prose a:focus {
+    color: var(--destructive-foreground);
+  }
+
+  .prose a:hover::after,
+  .prose a:focus::after {
+    background-color: var(--destructive-foreground);
+    opacity: 1;
+  }
+
+  /* Visited link color */
+  .prose a:visited {
+    color: var(--muted-foreground);
+  }
+  .glassmorphism {
+    background: rgba(54, 54, 54, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(54, 54, 54, 0.39);
   }
 }

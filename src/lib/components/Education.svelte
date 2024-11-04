@@ -7,11 +7,11 @@
 <div class="flex flex-col h-full items-start mb-5">
   <div class="flex flex-row items-center justify-between">
     <h1 class="font-mono text-2xl mb-3">
-      <span class="text-green-500">Edu</span>cation
+      <span class="text-fres-500">Edu</span>cation
     </h1>
   </div>
   <h2 class="mx-8 font-semibold mb-2">
-    Bachelor of <span class="text-green-500">Computer Science</span>
+    Bachelor of <span class="text-fres-500">Computer Science</span>
     <span class="inline-block font-thin text-muted-foreground">
       📅 Oct 2022 - Jul 2025
     </span>

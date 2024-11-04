@@ -8,7 +8,7 @@
 <div class="flex flex-col h-full items-start mx-1">
   <div class="flex flex-row items-start w-full">
     <h1 class="font-mono text-2xl mb-3">
-      <span class="text-green-500">Exp</span>erience
+      <span class="text-fres-500">Exp</span>erience
     </h1>
   </div>
   <h2 class="mx-4 font-semibold mb-2">

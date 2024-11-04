@@ -1,28 +1,16 @@
 <script lang="ts">
   import { Separator } from "$lib/components/ui/separator";
-  /*
-  import { BlogPost } from "$lib/components/BlogPost.svelte";
-  const posts: Post[] = [
-    {
-      id: 1,
-      title: "Post1",
-      description: "Description Post 1",
-      tags: [
-        { text: "Typescript", color: "sky-400" },
-        { text: "Hono", color: "orange-500" },
-        { text: "Bun", color: "slate-300" },
-      ],
-      date: "2024-08-25",
-      image: "",
-    },
-  ];
-    */
+  import BlogPost from "$lib/components/BlogPost.svelte";
+
+  export let data;
 </script>
 
-<main class="flex flex-col h-full w-full max-w-6xl items-start justify-start">
+<main class="flex flex-col h-full w-full max-w-4xl items-start justify-start">
   <h1 class="font-serif font-bold text-4xl">
-    <span class="text-green-500">B</span>log
+    <span class="text-fres-500">B</span>log
   </h1>
   <Separator class="my-4" />
-  <p>Currently busy...😴</p>
+  {#each data.posts as post}
+    <BlogPost data={post} />
+  {/each}
 </main>

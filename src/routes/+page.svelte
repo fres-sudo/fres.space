@@ -1,7 +1,13 @@
 <script lang="ts">
   import { Separator } from "$lib/components/ui/separator";
   import Button from "$lib/components/ui/button/button.svelte";
-  import { Github, Linkedin, Instagram } from "lucide-svelte";
+  import {
+    Github,
+    Linkedin,
+    Instagram,
+    ChevronLeft,
+    ChevronRight,
+  } from "lucide-svelte";
   import Navbar from "$lib/components/Navbar.svelte";
 </script>
 
@@ -14,20 +20,28 @@
       <h1
         class="text-center text-white font-serif font-bold text-5xl md:text-7xl"
       >
-        <span class="text-green-500">Francesco</span> Calicchio
+        <span class="text-fres-500">Francesco</span> Calicchio
       </h1>
       <div class="flex flex-col w-[15rem] md:w-[25rem]">
         <p class="font-thin text-center text-sm md:text-ml py-6">
           Welcome to my space, here you can find more <a
-            class="text-green-500 hover:underline"
+            class="text-fres-500 hover:underline"
             href="/about">about me</a
           >, my interest, and you can broswe through my mind.
         </p>
         <p
           class="font-mono text-muted-foreground text-center text-[12px] md:text-ml"
         >
-          You can also call me <span class="hover:text-green-500">fres</span>.
+          You can also call me <span class="hover:text-fres-500">fres</span>.
         </p>
+      </div>
+      <div class="flex flex-row items-center justify-center gap-4 mt-6">
+        <Button variant="outline" href="/blog"
+          ><ChevronLeft class="h-4 w-4 mr-2" /> Blog</Button
+        >
+        <Button variant="outline" href="/about">
+          About<ChevronRight class="h-4 w-4 ml-2" /></Button
+        >
       </div>
     </div>
   </div>
