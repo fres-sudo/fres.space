@@ -13,7 +13,7 @@
 
 <!-- Main container with min-h-screen to keep the footer at the bottom -->
 <div class="flex flex-col min-h-screen">
-  <main class="p-6 sm:p-10 flex-grow flex flex-col items-center justify-center pt-24">
+  <main class="p-6 sm:p-10 flex-grow flex flex-col items-center justify-center pt-48">
     <slot />
   </main>
   <Footer />

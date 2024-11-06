@@ -3,10 +3,10 @@
   import Button from "./ui/button/button.svelte";
   import { ArrowUpRight } from "lucide-svelte";
 
-  export let project;
+  export let project ;
 </script>
 
-<div class="glassmorphism flex flex-col p-8 m-4 w-96 justify-between">
+<div class="glassmorphism flex flex-col p-8 md:mr-4 my-4 xl:my-0 w-80 sm:w-96 justify-between">
   <p class="text-muted-foreground text-sm font-mono mb-4">March 12, 2024</p>
   <img
     class="w-16 h-16 rounded-full border-2 border-white object-cover mb-4"

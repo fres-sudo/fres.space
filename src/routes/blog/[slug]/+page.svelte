@@ -18,7 +18,7 @@
 
 <article>
   <!-- Title -->
-  <hgroup>
+  <hgroup class="pt-24">
     <Button variant="outline" href="/blog"
       ><ArrowLeft class="h-4 w-4 mr-2" /> Go Back</Button
     >

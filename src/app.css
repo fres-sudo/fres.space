@@ -68,14 +68,14 @@
 
 	.prose h1 {
 		font-size: 2.5rem;
-		padding-top: 1.5rem;
+		padding-top: 2.4rem;
 		padding-bottom: 1rem;
 		margin-bottom: var(--size-6); /* Extra bottom margin for separation */
 	}
 
 	.prose h2 {
 		font-size: 2rem;
-		padding-top: 1rem;
+		padding-top: 2rem;
 		padding-bottom: 0.8rem;
 		margin-bottom: var(--size-5);
 	}
@@ -92,28 +92,28 @@
 
 	.prose h3 {
 		font-size: 1.75rem;
-		padding-top: 0.8rem;
+		padding-top: 1.6rem;
 		padding-bottom: 0.6rem;
 		margin-bottom: var(--size-4);
 	}
 
 	.prose h4 {
 		font-size: 1.5rem;
-		padding-top: 0.6rem;
+		padding-top: 1.4rem;
 		padding-bottom: 0.4rem;
 		margin-bottom: var(--size-3);
 	}
 
 	.prose h5 {
 		font-size: 1.25rem;
-		padding-top: 0.5rem;
+		padding-top: 1.3rem;
 		padding-bottom: 0.3rem;
 		margin-bottom: var(--size-2);
 	}
 
 	.prose h6 {
 		font-size: 1.1rem;
-		padding-top: 0.4rem;
+		padding-top: 1.2rem;
 		padding-bottom: 0.2rem;
 		margin-bottom: var(--size-2);
 		font-style: italic;
