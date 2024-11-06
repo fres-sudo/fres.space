@@ -6,7 +6,7 @@
   import Projects from "$lib/components/Projects.svelte";
 </script>
 
-<main class="flex flex-col h-full max-w-6xl items-center justify-start">
+<main class="flex flex-col h-full max-w-6xl items-center justify-start pt-24">
   <AboutHeading />
   <div class="flex flex-col items-start justify-start pb-10">
     <h1 class="mx-10 font-serif font-bold text-4xl">

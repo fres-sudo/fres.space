@@ -5,7 +5,7 @@
   export let data;
 </script>
 
-<main class="flex flex-col h-full w-full max-w-4xl items-start justify-start">
+<main class="flex flex-col h-full w-full max-w-4xl items-start justify-start pt-24">
   <h1 class="font-serif font-bold text-4xl">
     <span class="text-fres-500">B</span>log
   </h1>

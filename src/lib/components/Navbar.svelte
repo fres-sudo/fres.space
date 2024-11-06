@@ -3,17 +3,14 @@
   import Button from "./ui/button/button.svelte";
 </script>
 
-<nav class="w-full h-20 items-start">
-  <div class="flex w-full items-center justify-center font-mono text-sm">
-    <div class="flex h-3 items-center space-x-2 sm:space-x-4 text-sm">
-      <Button href="/blog" variant="ghost">Blog</Button>
-      <Separator orientation="vertical" />
-      <Button href="/" variant="outline" class="text-fres-500">
-        Fres Space
-      </Button>
-      <Separator orientation="vertical" />
-      <Button variant="ghost" href="/about">About</Button>
-    </div>
+<nav class="w-full h-24 flex items-center justify-center shadow-md fixed top-0 left-0 z-10 nav-bar-glassmorphism">
+  <div class="flex items-center space-x-4 font-mono text-sm">
+    <Button href="/blog" variant="ghost">Blog</Button>
+    <Separator orientation="vertical" class="h-6" />
+    <Button href="/" variant="outline" class="text-fres-500">Fres Space</Button>
+    <Separator orientation="vertical" class="h-6" />
+    <Button variant="ghost" href="/about">About</Button>
   </div>
-  <Separator class=" my-10" />
+  <Separator orientation="horizontal" class="w-full absolute bottom-0" />
 </nav>
+

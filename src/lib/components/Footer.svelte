@@ -4,9 +4,9 @@
 </script>
 
 <footer
-  class="flex flex-col h-full w-full justify-end items-center place-items-end"
+  class="flex flex-col w-screen h-full justify-end items-center place-items-end"
 >
-  <Separator />
+  <Separator class="w-full" />
   <h1 class="pt-5 font-mono">You can find me here</h1>
   <div class="flex w-20 items-center mt-2 md:my-6 space-x-4 justify-center">
     <a

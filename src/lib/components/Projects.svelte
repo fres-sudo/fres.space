@@ -14,7 +14,7 @@
     },
     {
       title: "Form Wizard",
-      description: "Build and share form in a snap",
+      description: "Build and share form in a snap.",
       imageUrl: "/form-wizard.png",
       projectUrl: "https://formwizard.fres.space",
       githubUrl: "https://github.com/fres-sudo/form-wizard",
