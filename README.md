@@ -1,18 +1,40 @@
-# Quartz v4
+# Fres Space
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+This is my personal space, her I will be sharing my thoughts, projects, and ideas.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+This is a blog or personal site or whatever you want to call it, but my personal definition is **"my internet space"** I really like this concept,
+that's why I call it "Fres Space".
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+## Technical Stuff
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+This website is built on top of [Quartz](https://quartz.jzhao.xy) a beautiful static site generator build with `Javascript` and `Node.js`.
 
-## Sponsors
+### Theme
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+The theme is just the default one with a personal touch
+
+### Hosting
+
+The website is online thanks to my 5$ VPS by Hetzner, I'm using `Caddy` as a reverse proxy to serve the website.
+
+### Deployment Workflow
+
+To deploy the website to my VPS, I use a streamlined workflow that automates the process. Below is an overview of the steps involved:
+
+1. **Build the Code**: The code is built using the `build` script defined in the `package.json` file. This script compiles the static files needed for the website.
+
+2. **Push to Repository**: Once the code is built, I push the changes to my GitHub repository. This triggers a GitHub Actions workflow.
+
+3. **GitHub Actions**: The workflow file `.github/workflows/deploy.yml` is configured to automate the deployment process. It performs the following steps:
+   - Checks out the repository.
+   - Installs the necessary dependencies.
+   - Builds the static files.
+   - Deploys the built files to the VPS using `rsync` over SSH.
+
+4. **VPS Setup**: On the VPS, `Caddy` is configured to serve the static files from the deployment directory. The reverse proxy setup ensures that the website is accessible online.
+
+This automated workflow ensures that any changes pushed to the repository are quickly and efficiently deployed to the VPS, keeping the website up-to-date with minimal manual intervention.
+
+## Acknowledgment
+
+Build with ❤️  by me.
