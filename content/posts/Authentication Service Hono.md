@@ -1,7 +1,6 @@
 ---
-permalink: projects/hono-auth
-date: 2024-11-21
 title: How to spin up an Hono Authentication System.
+date: 2024-11-21
 ---
 
 ## Introduction 📍 

@@ -1,3 +1,7 @@
+---
+title: Svelte data loading
+---
+
 ## Load function
 
 In #Svelte we can have two different way to load data from a #database or whatever, the function that handle this kind of calls is `load` function, in #SvelteKit we can find this function in two differente places:
