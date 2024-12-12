@@ -18,6 +18,9 @@ Here it is a list of my latest projects:
 - [**Pomo**](https://pomo.fres.space), Study and Project/Task management application that embrace **Pomodoro Technique**, the app is build in `Flutter` and the [backend](https://github.com/fres-sudo/pomo-server) in `Hono` + PostgreSQL
 - [**FormWizard**](https://formwizard.fres.space) Is a interactive Form builder build with `Next JS`, Tailwind and Prisma.
 - [**Arduino Speedometer**](https://github.com/fres-sudo/arduino.speedometer) is an optimized bicycle speedometer built with `Assembly` and `C++` with direct access registry and timer interrupts.
+
+---
+
 ## Contact
 If you have something cool for me don't hesitate to reach me out!
 
