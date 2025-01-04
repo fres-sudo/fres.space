@@ -39,7 +39,7 @@ The factory method is a creational design pattern that provides an interface for
 
 Cool! Nice heading phrase but let's understand better its meaning.
 
-The **craational** parts of the factory method underline the fact that this method is used to create stuff, ok but when and how?
+The **creational** parts of the factory method underline the fact that this method is used to create stuff, ok but when and how?
 
 You have to imagine a Factory Method as a real damned factory who produces something.
 
@@ -51,7 +51,7 @@ Let's assume that he is just a `Customer` so we need to create a `Customer` obje
 
 Let's see how we can implement this in Java.
 ```java
-abstract claas User {
+abstract class User {
     private String name;
     private String email;
     private String password;
@@ -116,5 +116,10 @@ class UserFactory {
 }
 ```
 In this way this method can be expanded as the application grows and can accept new roles.
+
+The real value of the Factory Method is that it allows you to create object in various part of you application without repetition of the code, and more important it is very useful when you have to perform some **logic before creating the object**.
+
+### Abstract Factory
+
 
 

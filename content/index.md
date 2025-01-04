@@ -3,9 +3,9 @@ title: Francesco Calicchio
 ---
 
 
-<div style="display: flex; align-items: center; gap: 20px;">
-  <img src="https://avatars.githubusercontent.com/u/65305708?v=4" alt="Profile Image" style="border-radius: 50%; height: 200px; width:200px" />
-  <div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+  <img src="https://avatars.githubusercontent.com/u/65305708?v=4" alt="Profile Image" style="border-radius: 50%; height: 200px; width:200px; max-width: 100%;" />
+  <div style="flex: 1 1 200px;">
     <p>Hi folks 🧙‍♂️, I'm a Software Engineer from Italy, in love with open source world. If you are wondering what I'm doing right now I'm most likely building another <code>side-project</code>, or maybe just check my latest post.</p>
     <p>
       I'm currently working as Intern @ <a href="https://odoo.com" target="_blank">Odoo</a> 🟣 and creating <a href="https://github.com/fres-sudo/buildstuff" target="_blank">buildstuff</a> ✳️ an open source project management app for solo developers and small teams 😄. 
