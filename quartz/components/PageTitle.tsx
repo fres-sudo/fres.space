@@ -17,6 +17,10 @@ PageTitle.css = `
 .page-title {
   font-size: 1.75rem;
   margin: 0;
+  font-family: 'Space Mono', serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
 }
 `
 

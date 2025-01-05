@@ -5,9 +5,9 @@ date: 2024-11-21
 
 ## Introduction 📍 
 
-In this article I'm will try my best to explain to you about the creation from the ground up of a complete authentication system for your next successful application.
+In this article I'm will try my best to explain to you about the creation from the ground up of a complete #authentication system for your next successful application.
 
-I'm sorry for any grammatical errors, this is my first article and I'm not english mother tongue.
+I'm sorry for any grammatical errors, this is my first article and I'm not English mother tongue.
 
 <!-- TOC --><a name="functionalities"></a>
 
@@ -16,7 +16,7 @@ I'm sorry for any grammatical errors, this is my first article and I'm not engli
 Here it is a quick break down of what functionalities your app will have at the end of the article:
 
 - Email and password authentication
-- JWT Access and Refresh Token System
+- #JWT Access and Refresh Token System
 - Email Verification
 - Forgot password, OTP code verification, Reset password
 
@@ -26,10 +26,10 @@ Here it is a quick break down of what functionalities your app will have at the 
 
 Those are the main technologies and libraries that you will need to spin up this simple application:
 
-- Typescript, basically JS but a bit better,
-- Hono, a ligthweigth Javascript framework to build fast web application,
-- Drizzle ORM,
-- Postgres SQL,
+- #Typescript, basically JS but a bit better,
+- #Hono, a ligthweigth #Javascript framework to build fast web application,
+- #Drizzle ORM,
+- #Postgres SQL,
 - Zod for DTOs,
 - `tsrynge` an easy library for Dependence Injection in Typescript,
 
@@ -41,7 +41,7 @@ Notice that you can basically use what technologies you prefer, those are just b
 
 The architecture is heavy inspired by this [awesome project](https://github.com/Rykuno/TofuStack), I'll just mention more or less what the creator said in his introduction.
 
-There are a few popular architectures for structuring backends. Technical, Onion, DDD, VSA, and the list goes on.
+There are a few popular #architectures for structuring backends. Technical, Onion, DDD, VSA, and the list goes on.
 
 <!-- TOC --><a name="folder-structure"></a>
 
@@ -96,11 +96,11 @@ Authentication is usually a non-trivial area, so use my implementation at your o
 
 This guide is for developers that already know the basics of Javascript or Typescript, you don't need to know any JS framework, if you already play with Express.js or something like that you will probably will understand more, but it is not required.
 
-Of course basic understanding of how an HTTP server works and the interaction between client and server is mandatory, also what is a RESTful API and how it works.
+Of course basic understanding of how an #HTTP server works and the interaction between client and server is mandatory, also what is a #RESTful API and how it works.
 
-In this article I will not go in the details of the architectural implementation of the system, or how to install the software, it will use `bun` as package manager, but you can use whatever you prefer, it will change quite nothing.
+In this article I will not go in the details of the architectural implementation of the system, or how to install the software, it will use #bun as package manager, but you can use whatever you prefer, it will change quite nothing.
 
-Also a basic understand of Docker is better to complete understand the course.
+Also a basic understand of #Docker is better to complete understand the course.
 
 <!-- TOC --><a name="where"></a>
 
