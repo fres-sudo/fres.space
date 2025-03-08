@@ -29,10 +29,10 @@ export default function Header() {
 						text="Linkedin"
 						href="https://linkedin.com/in/francesco-calicchio"
 					/>
-					{/* <ExternalLink
+					<ExternalLink
 						text="CV"
-						href="/cv.pdf"
-					/> */}
+						href="/CV_FRANCESCO_CALICCHIO.pdf"
+					/>
 				</div>
 			</div>
 		</header>
