@@ -1,61 +1,53 @@
 import { getAllPosts } from "@/lib/mdx";
 import Link from "next/link";
-import BlogCard from "./_components/blog-card";
-import { gloriaHallelujah } from "@/components/header";
-import Image from "next/image";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
+import GridCard from "./_components/blog-card";
+import { ArrowRight } from "lucide-react";
+import Hero from "./_components/hero";
+import { HyperText } from "@/components/ui/hyper-text";
+import WorkExperience from "./_components/work-experience";
 
 export default async function Home() {
 	const posts = await getAllPosts();
-	const latestPosts = posts.slice(0, 3);
+	const latestPosts = posts.slice(0, 3).reverse();
 
 	return (
-		<div className="space-y-20">
-			<section className="space-y-6 flex md:flex-row flex-col items-center justify-between">
-				<div className="flex flex-col space-y-4">
-					<h1 className={`${gloriaHallelujah.className} text-5xl font-bold`}>
-						<span className="text-green-500">Fr</span>anc
-						<span className="text-green-500">es</span>co Calicchio
-					</h1>
-					<p className="text-ms text-muted-foreground max-w-[500px]">
-						Software Engineer from Italy 🇮🇹. I help companies build
-						production-ready web and mobile applications with modern
-						technologies and best practices.
-					</p>
-					<Link
-						href={"https://cal.com/francescocalicchio/30min"}
-						target="_blank">
-						<ShimmerButton>Book a Call Now</ShimmerButton>
-					</Link>
-				</div>
-				<Image
-					src={"/fres graffiti.png"}
-					alt="Fres Graffiti"
-					width={600}
-					height={600}
-				/>
-			</section>
-
-			<section className="space-y-6 ">
-				<div className="flex items-center gap-4 justify-between">
-					<h2 className="text-2xl font-bold">Highligthed Posts</h2>
+		<div>
+			<Hero />
+			<section className="border-t">
+				<div className="flex items-center gap-4 justify-between px-6 py-3 border-b">
+					<HyperText className="text-md font-thin">Highlighted Posts</HyperText>
 
 					<Link
-						className="text-xs flex gap-2 items-center hover:underline text-muted-foreground"
+						className="text-xs flex gap-1 items-center hover:underline text-muted-foreground"
 						href={"/blog"}>
-						View all posts
+						View all posts <ArrowRight size={16} />
 					</Link>
 				</div>
 
-				<div className="grid gap-6 md:grid-cols-3">
+				<div className="grid md:grid-cols-3">
 					{latestPosts.map((post) => (
-						<BlogCard
+						<GridCard
 							key={post.slug}
 							post={post}
 						/>
 					))}
 				</div>
 			</section>
+			<div className="flex items-center gap-4 justify-between px-6 py-3 border-t">
+				<HyperText className="text-md font-thin">Work Experience</HyperText>
+			</div>
+			<WorkExperience />
+			<div className="flex items-center gap-4 justify-between px-6 py-3 border-b">
+				<HyperText className="text-md font-thin">Projects</HyperText>
+			</div>
+			<div className="grid md:grid-cols-3">
+				{latestPosts.map((post) => (
+					<GridCard
+						key={post.slug}
+						post={post}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }
