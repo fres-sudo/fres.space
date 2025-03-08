@@ -1,6 +1,5 @@
 import { HyperText } from "@/components/ui/hyper-text";
-import { Separator } from "@/components/ui/separator";
-import { CalendarDays, Tag } from "lucide-react";
+import { Tag } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
 	Card,
@@ -8,7 +7,6 @@ import {
 	CardFooter,
 	CardHeader,
 } from "@/components/ui/card";
-import { formatDate } from "@/lib/utils";
 import ExternalLink from "@/components/external-link";
 
 interface Project {
